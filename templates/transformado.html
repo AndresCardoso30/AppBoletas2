@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    td{
+        height: 50px;
+    }
+
+    .titulo{
+        font-size: large;
+        color: black;
+        font-style: oblique;
+
+    }
+
+    .table{
+        border-radius: 2px;
+        border-color: black;
+        border-style: double;
+    }
+
+    .col-6{
+        border-radius: 1px;
+        border-color: gray;
+        border-style: solid;
+    }
+
+</style>
+<h1 class="text-center">Boleta</h1>
+
+<div class="row text-center" style="margin-right: 10%; margin-left: 10%;">
+    <div class="col-6">
+       Nº de boleta: {{n_boleta}}
+    </div>
+    <div class="col-6">
+        Fecha: {{fecha.day}}/{{fecha.month}}/{{fecha.year}}
+    </div>
+</div>
+<br/>
+<table class="table">
+    <tr>
+        <td class="titulo">Cantidad</td>
+        <td class="titulo">Producto</td>
+        <td class="titulo">P. Unitario</td>
+        <td class="titulo">Importe en $</td>
+    </tr>
+    <tr>
+        <td>{{cantidad1}}</td>
+        <td>{{producto1}}</td>
+        <td>{{unit1}}</td>
+        <td>{{importe1}}</td>
+    </tr>
+    <tr>
+        <td>{{cantidad2}}</td>
+        <td>{{producto2}}</td>
+        <td>{{unit2}}</td>
+        <td>{{importe2}}</td>
+    </tr>
+    <tr>
+        <td>{{cantidad3}}</td>
+        <td>{{producto3}}</td>
+        <td>{{unit3}}</td>
+        <td>{{importe3}}</td>
+    </tr>
+    <tr>
+        <td>{{cantidad4}}</td>
+        <td>{{producto4}}</td>
+        <td>{{unit4}}</td>
+        <td>{{importe4}}</td>
+    </tr>
+    <tr>
+        <td>{{cantidad5}}</td>
+        <td>{{producto5}}</td>
+        <td>{{unit5}}</td>
+        <td>{{importe5}}</td>
+    </tr>
+    <tr>
+        <td>{{cantidad6}}</td>
+        <td>{{producto6}}</td>
+        <td>{{unit6}}</td>
+        <td>{{importe6}}</td>
+    </tr>
+    <tr>
+        <td>{{cantidad7}}</td>
+        <td>{{producto7}}</td>
+        <td>{{unit7}}</td>
+        <td>{{importe7}}</td>
+    </tr>
+    <tr style="border-style: solid; border-radius: 1px;">
+        <td>Total</td>
+        <td></td>
+        <td></td>
+        <td style="border-style: solid; border-radius: 1px;">${{total}}</td>
+    </tr>
+    <tr>
+        <td style="height: 150px;">Agregados: {{agregado}}</td>
+    </tr>
+</table>
+
+
+{% endblock %}

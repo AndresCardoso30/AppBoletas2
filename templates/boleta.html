@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    td{
+        height: 50px;
+    }
+
+    .titulo{
+        font-size: large;
+        color: black;
+        font-style: oblique;
+
+    }
+
+    .table{
+        border-radius: 2px;
+        border-color: black;
+        border-style: double;
+    }
+
+    .col-6{
+        border-radius: 1px;
+        border-color: gray;
+        border-style: solid;
+    }
+
+</style>
+<h1 class="text-center">Boleta</h1>
+<form action="{% url 'transformar' %}" method="post"> {% csrf_token %}
+<div class="row text-center" style="margin-right: 10%; margin-left: 10%;">
+    <div class="col-6">
+        Nº de Boleta:<input type="number" name="n_boleta" id="n_boleta">
+    </div>
+    <div class="col-6">
+        Fecha
+    </div>
+</div>
+<br/>
+<table class="table">
+    <tr>
+        <td class="titulo">Cantidad</td>
+        <td class="titulo">Producto</td>
+        <td class="titulo">P. Unitario</td>
+        <td class="titulo">Importe en $</td>
+    </tr>
+    <tr>
+        <td><input type="number" name="cantidad1" id="cantidad1"></td>
+        <td><input type="text" name="producto1" id="producto1"></td>
+        <td><input type="number" name="unit1" id="unit1"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="number" name="cantidad2" id="cantidad2"></td>
+        <td><input type="text" name="producto2" id="producto2"></td>
+        <td><input type="text" name="unit2" id="unit2"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="number" name="cantidad3" id="cantidad3"></td>
+        <td><input type="text" name="producto3" id="producto3"></td>
+        <td><input type="text" name="unit3" id="unit3"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="number" name="cantidad4" id="cantidad4"></td>
+        <td><input type="text" name="producto4" id="producto4"></td>
+        <td><input type="text" name="unit4" id="unit4"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="number" name="cantidad5" id="cantidad5"></td>
+        <td><input type="text" name="producto5" id="producto5"></td>
+        <td><input type="text" name="unit5" id="unit5"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="number" name="cantidad6" id="cantidad6"></td>
+        <td><input type="text" name="producto6" id="producto6"></td>
+        <td><input type="text" name="unit6" id="unit6"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="number" name="cantidad7" id="cantidad7"></td>
+        <td><input type="text" name="producto7" id="producto7"></td>
+        <td><input type="text" name="unit7" id="unit7"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Agregados:<input type="text" name="agregado" id="agregado"></td>
+    </tr>
+</table>
+<button type="submit" style="color: black;">Confrimar</button>
+</form>
+
+{% endblock %}
